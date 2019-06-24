@@ -1,0 +1,29 @@
+<div class="container login-container">
+  <div class="row">
+    <div class="col-md-6 login-form-1">
+      <h3>
+        Welcome to Medi Central!
+      </h3>
+
+      <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="email" placeholder="Email *" />
+        <div class="error-msg" *ngIf="!isEmailValid">
+          {{emailValidationErrorMsg}}
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" [(ngModel)]="password" placeholder="Password *" />
+        <div class="error-msg" *ngIf="!isPasswordValid">
+          {{passwordValidationErrorMsg}}
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="submit" (click)="sendLoginRequest()" class="btnSubmit" value="Login" />
+      </div>
+      <div class="form-group">
+        <a href="#" class="btnForgotPwd">Forgot Password?</a>
+      </div>
+
+    </div>
+  </div>
+</div>
